@@ -8,7 +8,8 @@ app.post('/deploy', (req, res) => {
     }
     res.send("ok  " + random)
 })
-app.post('/', (req, res) => {
+app.post('/dev', (req, res) => {
+    axios.post('https://api.netlify.com/build_hooks/5f2bd48fdbfb5e93a1458b0e')
     res.send("ok")
 })
 app.get('/', (req, res) => {
